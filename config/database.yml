@@ -20,7 +20,7 @@ staging:
   adapter: mysql
   database: CHANGEME_staging
   username: CHANGEME
-  password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
+  password: "<%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>"
   host: localhost
   encoding: utf8
   socket: /var/lib/mysql/mysql.sock
@@ -29,7 +29,7 @@ production:
   adapter: mysql
   database: CHANGEME_production
   username: CHANGEME
-  password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
+  password: "<%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>"
   host: localhost
   encoding: utf8
   socket: /var/lib/mysql/mysql.sock
